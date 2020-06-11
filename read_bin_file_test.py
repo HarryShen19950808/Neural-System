@@ -9,10 +9,10 @@ import numpy as np
 #import utils.kitti_aug_utils as augUtils
 #import utils.kitti_bev_utils as bev_utils
 import utils.config as cnf
-import cv2, torch
+import cv2, #torch
 import pyzed.sl as sl
 import pcl.pcl_visualization
-from FastSCNN.FastSCNN import FastSCNN
+#from FastSCNN.FastSCNN import FastSCNN
 
 #'''
 Raw_image = cv2.imread("./sampledata/image_2/000000.png")
@@ -79,6 +79,7 @@ degree_over_pixel = hov / source_w # 1 pixel = how much degree
 maximum_depth = 10
 pts_old = []
 
+'''
 # label
 back_label = 0
 road_label = 1
@@ -86,8 +87,8 @@ sidewalk_label = 2
 person_label = 3
 hole_label = 6
 car_label = 5
-
 fast_scnn = FastSCNN(device)
+'''
 
 # Create a ZED camera object
 zed = sl.Camera()
@@ -163,7 +164,7 @@ while key != 113 and v:
         
         point_cloud_np = point_cloud.get_data()
         
-        Image_seg, result = fast_scnn.demo(image_ocv[:, :, :3])
+        #Image_seg, result = fast_scnn.demo(image_ocv[:, :, :3])
         
         # rgb
         blue = image_ocv[:, :, 0].astype(np.uint32)
