@@ -5,4 +5,4 @@
 * `depth_prediction_example.ipynb` is the pipeline of reconstruction the RGB image in `Monodepth2`.
 ## Reference
 1. [KITTI](http://www.cvlibs.net/datasets/kitti/)
-2. [MonoDepth2](https://github.com/nianticlabs/monodepth2)
+2. [Monodepth2](https://github.com/nianticlabs/monodepth2)
